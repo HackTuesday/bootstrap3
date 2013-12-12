@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>datepicker3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <h1>datepicker3</h1>
+
+    <div class="form-group">
+      <label for="week_start_date">Start date</label>
+      <input type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy/mm/dd" id="week_start_date" name="week[start_date]" value="2013/12/12">
+    </div>
+
+
+    <div class="embedded-datepicker-container">
+      <label for="embedded_week_start_date">Start date</label>
+      <div></div>
+    </div>
+
+
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+
+    <script>
+      $( function( ) {
+        $( '.embedded-datepicker-container div' ).datepicker( {
+          format: 'yyyy/mm/dd'
+        } ).datepicker( 'update', '2013/12/12' );
+      } );
+    </script>
+
+  </body>
+</html>
+
+
