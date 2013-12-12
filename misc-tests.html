@@ -45,22 +45,32 @@ body {
         <h1>Starter Template</h1>
       </div>
 
-        <p class="lead">There's some important stuff in here to tell you before you view the rest of the site.</p>
+      <p class="lead">There's some important stuff in here to tell you before you view the rest of the site.</p>
 
-        <p>I am not the lead paragraph.</p>
+      <p>I am not the lead paragraph.</p>
 
-        <ul class="media-list">
-          <li class="media">
-          <img class="media-object pull-left" src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y">
-          <div class="media-body">
-            <h4 class="media-heading">Adam Holland <small>@aholland <time class="pull-right">2013-12-24</time></small> </h4>
-            Really, is it so much to ask?
-            <button type="button" class="btn btn-default btn-xs pull-right">
-              <span class="glyphicon glyphicon-trash"></span> Delete
-            </button>
+      <ul class="media-list">
+        <li class="media">
+        <img class="media-object pull-left" src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&f=y">
+        <div class="media-body">
+          <h4 class="media-heading">Adam Holland <small>@aholland <time class="pull-right">2013-12-24</time></small> </h4>
+          Really, is it so much to ask?
+          <button type="button" class="btn btn-default btn-xs pull-right">
+            <span class="glyphicon glyphicon-trash"></span> Delete
+          </button>
+        </div>
+      </ul>
 
-          </div>
-        </ul>
+      <form role="form">
+        <div class="form-group">
+          <label for="student_email">Email</label>
+          <input type="email" class="form-control" id="student_email" placeholder="user@example.com" name="student[email]">
+        </div>
+
+        <div class="form-group">
+          <label for="week_start_date">Start date &amp; time</label>
+          <input type="date" class="form-control" id="week_start_date" name="week[start_date]">
+        </div>
 
 
     </div>
