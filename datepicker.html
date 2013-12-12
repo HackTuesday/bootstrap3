@@ -10,18 +10,84 @@
   </head>
 
   <body>
+    <div class="container">
 
-    <h1>datepicker3</h1>
+      <div class="page-header">
+        <h1>datepicker3</h1>
+      </div>
 
-    <div class="form-group">
-      <label for="week_start_date">Start date</label>
-      <input type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy/mm/dd" id="week_start_date" name="week[start_date]" value="2013/12/12">
-    </div>
+      <form role="form">
+        <div class="form-group">
+          <label for="week_start_date_basic">Start date</label>
+          <input type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" id="week_start_date_basic" name="week[start_date]" value="2013-12-12">
+        </div>
+      </form>
+
+      <h2>Meeting date</h2>
+
+      <form role="form" class="form-inline">
+        <div class="form-group">
+          <label for="week_start_date_inline" class="sr-only">Date</label>
+          <input type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" id="week_start_date_inline" name="week[start_date]" value="2013-12-12">
+        </div>
+
+        <div class="form-group">
+          <label for="week_start_time_hour_inline" class="sr-only">Hour</label>
+          <input type="number" class="form-control" id="week_start_time_hour_inline" name="week[start_time_hour]" value="14" min="0" max="23">
+        </div>
+
+        <span>:</span>
+
+        <div class="form-group">
+          <label for="week_start_time_min_inline" class="sr-only">Minute</label>
+          <input type="number" class="form-control" id="week_start_time_min_inline" name="week[start_time_min]" value="0" min="0" max="59">
+        </div>
+      </form>
 
 
-    <div class="embedded-datepicker-container">
-      <label for="embedded_week_start_date">Start date</label>
-      <div></div>
+      <h2>Meeting date</h2>
+
+      <form role="form" class="form-horizontal">
+        <div class="form-group">
+          <label for="week_start_date_horizontal" class="col-sm-2 control-label">Date</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-autoclose="true" id="week_start_date_horizontal" name="week[start_date]" value="2013-12-12" style="width: 13.5em; display: inline-block;">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="week_start_time_hour_horizontal" class="col-sm-2 control-label">Time</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="week_start_time_hour_horizontal" name="week[start_time_hour]" value="14" min="0" max="23" style="width: 6em; display: inline-block;">
+
+            <span style="width: 1em; display: inline-block; text-align: center;">:</span>
+
+            <label for="week_start_time_min_horizontal" class="sr-only">Minute</label>
+            <input type="number" class="form-control" id="week_start_time_min_horizontal" name="week[start_time_min]" value="0" min="0" max="45" step="15" style="width: 6em; display: inline-block;">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-2">
+            <button type="submit" class="btn btn-primary" style="width: 6em;">Save</button>
+          </div>
+
+          <div class="col-sm-2">
+            <button type="button" class="btn btn-default" style="width: 6em;">Cancel</button>
+          </div>
+        </div>
+
+      </form>
+
+      <h2>Meeting date</h2>
+
+      <form role="form">
+        <div class="embedded-datepicker-container">
+          <label for="embedded_week_start_date">Start date</label>
+          <div></div>
+        </div>
+      </form>
+
     </div>
 
 
@@ -32,8 +98,8 @@
     <script>
       $( function( ) {
         $( '.embedded-datepicker-container div' ).datepicker( {
-          format: 'yyyy/mm/dd'
-        } ).datepicker( 'update', '2013/12/12' );
+          format: 'yyyy-mm-dd'
+        } ).datepicker( 'update', '2013-12-12' );
       } );
     </script>
 
